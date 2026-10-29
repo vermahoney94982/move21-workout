@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101714">
+  <meta name="description" content="A simple 21-day bodyweight workout plan and progress tracker.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <title>Move 21 — Home Workout</title>
+  <style>
+    :root{color-scheme:dark;--bg:#101714;--panel:#19221d;--panel2:#202c25;--line:#334238;--text:#f3f7f3;--muted:#aab8ad;--accent:#c9f36a;--accentText:#17200d;--blue:#9bd7ff;--danger:#ffb4a9;--radius:20px}
+    *{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at top right,#24372b 0,transparent 38%),var(--bg);color:var(--text);font:16px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:0 0 calc(28px + env(safe-area-inset-bottom))}
+    button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}.wrap{max-width:760px;margin:auto;padding:0 16px}.top{padding:calc(18px + env(safe-area-inset-top)) 0 16px;display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{display:flex;gap:10px;align-items:center}.logo{width:42px;height:42px;border-radius:14px;background:var(--accent);color:var(--accentText);display:grid;place-items:center;font-size:22px;font-weight:900}.eyebrow{color:var(--accent);font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.brand h1{font-size:20px;line-height:1.1;margin:2px 0 0}.small-btn,.tab,.daybtn,.primary,.secondary,.checkbtn{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:13px;padding:10px 13px}.small-btn{font-size:13px}.hero{padding:24px;border-radius:26px;background:linear-gradient(135deg,#c9f36a,#9ed84c);color:#18220f;position:relative;overflow:hidden}.hero:after{content:'21';position:absolute;right:-2px;bottom:-40px;font-size:160px;font-weight:900;opacity:.1;line-height:1}.hero h2{font-size:clamp(28px,7vw,42px);line-height:1.02;letter-spacing:-.04em;margin:10px 0}.hero p{margin:0;max-width:430px;color:#2a381e}.hero .eyebrow{color:#334b1b}.hero-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:20px;position:relative;z-index:1}.pill{font-size:12px;font-weight:800;background:#1b2a13;color:#e6ffc0;border-radius:99px;padding:8px 11px}.progress{height:7px;border-radius:99px;background:#d9f6a9;overflow:hidden;margin-top:13px;position:relative;z-index:1}.progress span{display:block;height:100%;width:0;background:#263d16;border-radius:99px;transition:width .2s}.section-head{display:flex;justify-content:space-between;align-items:end;margin:26px 0 12px;gap:12px}.section-head h2{font-size:20px;margin:0}.muted{color:var(--muted)}.section-head p{font-size:12px;margin:3px 0 0}.tabs{display:flex;gap:8px;margin:14px 0;overflow-x:auto;padding-bottom:2px}.tab{white-space:nowrap;font-size:13px}.tab.active{background:var(--accent);border-color:var(--accent);color:var(--accentText);font-weight:800}.today-card,.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px}.today-top{display:flex;justify-content:space-between;gap:12px;align-items:start}.today-top h3{font-size:22px;margin:4px 0}.tag{display:inline-block;border-radius:99px;background:var(--panel2);color:var(--blue);font-size:11px;font-weight:800;padding:6px 9px}.tag.rest{color:var(--accent)}.exercise-list{display:grid;gap:10px;margin:16px 0}.exercise{display:grid;grid-template-columns:38px 1fr auto;gap:11px;align-items:start;padding:13px;background:var(--panel2);border-radius:15px}.num{width:34px;height:34px;display:grid;place-items:center;background:#35453a;border-radius:11px;font-weight:800;color:var(--accent)}.exercise h4{margin:0 0 3px;font-size:15px}.exercise p{margin:0;font-size:13px;color:var(--muted)}.reps{font-size:12px;font-weight:800;color:var(--accent);text-align:right;white-space:nowrap}.primary{background:var(--accent);color:var(--accentText);border-color:var(--accent);font-weight:850;width:100%;padding:14px}.primary.done{background:#25352a;color:var(--accent);border-color:#526b4e}.secondary{width:100%;padding:12px;margin-top:8px}.safety{font-size:12px;color:var(--muted);margin:12px 2px 0}.calendar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.daybtn{padding:10px 5px;text-align:left;min-height:75px;display:flex;flex-direction:column;gap:5px}.daybtn strong{font-size:13px}.daybtn span{font-size:11px;color:var(--muted)}.daybtn.selected{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}.daybtn.complete{background:#25352a;border-color:#526b4e}.dot{color:var(--accent);font-size:14px!important}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px}.stat{background:var(--panel2);border-radius:15px;padding:15px}.stat strong{display:block;font-size:26px;letter-spacing:-.03em}.stat span{font-size:12px;color:var(--muted)}.tips{padding-left:18px;color:var(--muted);font-size:14px}.tips li{margin:8px 0}.footer{text-align:center;color:var(--muted);font-size:11px;padding:25px 0 5px}.notice{border:1px solid #4e6346;background:#202c25;border-radius:14px;padding:13px;font-size:13px;color:var(--muted);margin-top:12px}.hide{display:none!important}.toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);background:#f3f7f3;color:#101714;padding:11px 16px;border-radius:99px;font-size:13px;font-weight:800;box-shadow:0 6px 25px #0005;z-index:5;white-space:nowrap}.small-link{color:var(--blue);background:none;border:0;padding:0;text-decoration:underline;font-size:13px}
+    @media(min-width:600px){.calendar{grid-template-columns:repeat(6,minmax(0,1fr))}.hero{padding:30px}.wrap{padding:0 22px}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><div class="brand"><div class="logo">↗</div><div><div class="eyebrow">YOUR BODYWEIGHT PLAN</div><h1>Move 21</h1></div></div><button id="installBtn" class="small-btn hide">＋ Install</button></header>
+  <section class="hero"><div class="eyebrow">29 OCT — 19 NOV 2026</div><h2>Small steps.<br>Real strength.</h2><p>A realistic full-body routine. Train with good form, eat enough, and let recovery do its job.</p><div class="hero-row"><span id="heroProgressText" class="pill">0 sessions completed</span><span id="heroPercent" style="font-weight:900">0%</span></div><div class="progress"><span id="heroProgressBar"></span></div></section>
+  <div class="section-head"><div><h2>Today's session</h2><p id="todayDate" class="muted">Loading date…</p></div><button id="todayBtn" class="small-btn">Go to today</button></div>
+  <div class="tabs" role="tablist"><button class="tab active" data-filter="all">All days</button><button class="tab" data-filter="train">Training</button><button class="tab" data-filter="rest">Recovery</button></div>
+  <section id="todayCard" class="today-card" aria-live="polite"></section>
+  <div class="section-head"><div><h2>21-day calendar</h2><p class="muted">Tap a day to view its plan.</p></div><span id="calendarCount" class="tag">0 / 22</span></div>
+  <section id="calendar" class="calendar"></section>
+  <div class="section-head"><div><h2>Your progress</h2><p class="muted">Saved on this device in this browser.</p></div></div>
+  <section class="two-col"><div class="stat"><strong id="statDone">0</strong><span>Days completed</span></div><div class="stat"><strong id="statTrain">0</strong><span>Training sessions completed</span></div></section>
+  <section class="panel" style="margin-top:12px"><h3 style="margin:0 0 8px">Keep it sustainable</h3><ul class="tips"><li>Warm up for 4–5 minutes before training.</li><li>Rest 60–120 seconds between sets, or longer if needed.</li><li>Finish most sets with 2–3 good reps still possible.</li><li>Take recovery days seriously. Stop if you feel pain, dizziness or unusual shortness of breath.</li><li>Eat regular meals and sleep enough; don't try to force a dramatic change in three weeks.</li></ul><button id="resetBtn" class="secondary">Reset saved progress</button></section>
+  <div class="footer">Move 21 · Bodyweight only · No equipment required</div>
+</div>
+<div id="toast" class="toast hide" role="status"></div>
+<script>
+(() => {
+  const START = '2026-10-29';
+  const LAST = '2026-11-19';
+  const STORE = 'move21-progress-v1';
+  const exercises = {
+    pushups:{name:'Push-ups',sets:'3 sets × 6–12 reps',desc:'Keep your body in a straight line and lower under control. Use knee or wall push-ups if needed.'},
+    squats:{name:'Bodyweight squats',sets:'3 sets × 12–20 reps',desc:'Keep feet planted and knees tracking in line with toes. Use a comfortable depth.'},
+    bridges:{name:'Glute bridges',sets:'3 sets × 12–20 reps',desc:'Raise hips smoothly and avoid arching your lower back.'},
+    angels:{name:'Reverse snow angels',sets:'2 sets × 10–15 reps',desc:'Lie face down and move arms in a wide arc. Keep the movement small and controlled.'},
+    bird:{name:'Bird dogs',sets:'2 sets × 8–12 per side',desc:'From hands and knees, extend the opposite arm and leg while keeping your torso steady.'},
+    incline:{name:'Incline push-ups',sets:'3 sets × 8–15 reps',desc:'Use a stable, non-slip surface. If unavailable, do knee push-ups on the floor.'},
+    lunges:{name:'Reverse lunges',sets:'2 sets × 8–12 per leg',desc:'Step backward and lower with control. Hold a wall lightly for balance if needed.'},
+    pike:{name:'Pike push-ups',sets:'2 sets × 5–10 reps',desc:'Keep the range comfortable. Substitute wall push-ups if this is too difficult.'},
+    yt:{name:'Prone Y–T raises',sets:'2 sets × 8–12 total',desc:'Lie face down and gently lift arms into Y and T shapes without forcing your neck.'},
+    plank:{name:'Forearm plank',sets:'3 sets × 15–30 seconds',desc:'Keep hips steady, breathe normally, and stop before your form breaks.'}
+  };
+  const days = [
+    ['2026-10-29','Workout A','train'],['2026-10-30','Recovery','rest'],['2026-10-31','Workout B','train'],['2026-11-01','Recovery','rest'],['2026-11-02','Workout A','train'],['2026-11-03','Recovery','rest'],['2026-11-04','Workout B','train'],['2026-11-05','Recovery','rest'],['2026-11-06','Workout A','train'],['2026-11-07','Recovery','rest'],['2026-11-08','Workout B','train'],['2026-11-09','Recovery','rest'],['2026-11-10','Workout A','train'],['2026-11-11','Recovery','rest'],['2026-11-12','Workout B','train'],['2026-11-13','Recovery','rest'],['2026-11-14','Workout A','train'],['2026-11-15','Recovery','rest'],['2026-11-16','Workout B','train'],['2026-11-17','Recovery','rest'],['2026-11-18','Workout A','train'],['2026-11-19','Progress check','check']
+  ];
+  const workouts = { 'Workout A':['pushups','squats','bridges','angels','bird'], 'Workout B':['incline','lunges','pike','yt','plank'] };
+  const $ = id => document.getElementById(id);
+  let selected = START, filter = 'all', state = load();
+  function load(){try{return JSON.parse(localStorage.getItem(STORE))||{completed:[]}}catch(e){return {completed:[]}}}
+  function save(){try{localStorage.setItem(STORE,JSON.stringify(state))}catch(e){showToast('Browser storage unavailable; progress may not persist.')}}
+  function dateObj(s){return new Date(s+'T12:00:00')}
+  function pretty(s,opts={weekday:'short',day:'numeric',month:'short'}){return dateObj(s).toLocaleDateString('en-IN',opts)}
+  function currentISO(){const d=new Date();const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,'0'),day=String(d.getDate()).padStart(2,'0');return `${y}-${m}-${day}`}
+  function item(s){return days.find(d=>d[0]===s)}
+  function complete(s){return state.completed.includes(s)}
+  function isTraining(d){return d[2]==='train'}
+  function render(){
+    const total=days.length, done=state.completed.length, trainDone=days.filter(d=>d[2]==='train'&&complete(d[0])).length;
+    $('heroProgressText').textContent=`${trainDone} training sessions completed`;$('heroPercent').textContent=`${Math.round(done/total*100)}%`;$('heroProgressBar').style.width=`${done/total*100}%`;
+    $('statDone').textContent=done;$('statTrain').textContent=trainDone;$('calendarCount').textContent=`${done} / ${total}`;
+    $('todayDate').textContent=`${pretty(selected,{weekday:'long',day:'numeric',month:'long'})} · ${selected===currentISO()?'Today':selected<currentISO()?'Selected day':'Upcoming'}`;
+    renderCard();renderCalendar();
+  }
+  function renderCard(){const d=item(selected);if(!d)return;const [date,title,type]=d;let content='';
+    if(type==='train'){
+      content=`<div class="today-top"><div><span class="tag">${title}</span><h3>${title==='Workout A'?'Full body · A':'Full body · B'}</h3><div class="muted" style="font-size:13px">About 25–40 min · Bodyweight only</div></div><span class="tag">${complete(date)?'Completed':'Training'}</span></div><div class="exercise-list">${workouts[title].map((key,i)=>{const e=exercises[key];return `<article class="exercise"><div class="num">${i+1}</div><div><h4>${e.name}</h4><p>${e.desc}</p></div><div class="reps">${e.sets}</div></article>`}).join('')}</div><button id="completeBtn" class="primary ${complete(date)?'done':''}">${complete(date)?'✓ Session completed':'Mark session complete'}</button><p class="safety">Warm up for 4–5 minutes first. Take breaks as needed; quality reps matter more than speed.</p>`;
+    } else if(type==='rest'){
+      content=`<div class="today-top"><div><span class="tag rest">Recovery day</span><h3>Rest is part of training.</h3><p class="muted">${pretty(date,{weekday:'long',day:'numeric',month:'long'})}</p></div><span style="font-size:30px">☁</span></div><p class="muted">Choose gentle walking, easy mobility or normal daily activity. No hard workout is required today.</p><div class="notice">Drink water, eat regular meals and get a good night's sleep. If you're very sore or tired, take it easy.</div><button id="completeBtn" class="primary ${complete(date)?'done':''}" style="margin-top:14px">${complete(date)?'✓ Recovery day checked':'Mark recovery day complete'}</button>`;
+    } else {
+      content=`<div class="today-top"><div><span class="tag rest">Final day</span><h3>Check your progress.</h3><p class="muted">Notice what feels easier than it did at the start.</p></div><span style="font-size:30px">✦</span></div><ul class="tips"><li>Compare your push-up or squat technique—not just the number of reps.</li><li>Notice energy, posture and consistency.</li><li>Take a gentle walk or stretch; no max-effort test is needed.</li></ul><button id="completeBtn" class="primary ${complete(date)?'done':''}">${complete(date)?'✓ Progress check complete':'Mark progress check complete'}</button>`;
+    }
+    $('todayCard').innerHTML=content;$('completeBtn').addEventListener('click',()=>{if(complete(date)){state.completed=state.completed.filter(x=>x!==date)}else{state.completed.push(date)}save();render();showToast(complete(date)?'Progress updated':'Saved on this device')});
+  }
+  function renderCalendar(){const filtered=days.filter(d=>filter==='all'||(filter==='train'?d[2]==='train':d[2]!=='train'));$('calendar').innerHTML=filtered.map(d=>{const [date,title,type]=d;return `<button class="daybtn ${selected===date?'selected':''} ${complete(date)?'complete':''}" data-date="${date}"><strong>${pretty(date,{day:'numeric',month:'short'})}</strong><span>${title}</span><span class="dot">${complete(date)?'✓':type==='train'?'●':type==='rest'?'○':'✦'}</span></button>`}).join('');document.querySelectorAll('.daybtn').forEach(b=>b.addEventListener('click',()=>{selected=b.dataset.date;render();$('todayCard').scrollIntoView({behavior:'smooth',block:'start'})}))}
+  function showToast(msg){const t=$('toast');t.textContent=msg;t.classList.remove('hide');clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>t.classList.add('hide'),2100)}
+  document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));renderCalendar()}));
+  $('todayBtn').addEventListener('click',()=>{const now=currentISO();selected=days.some(d=>d[0]===now)?now:START;render();$('todayCard').scrollIntoView({behavior:'smooth',block:'start'})});
+  $('resetBtn').addEventListener('click',()=>{if(confirm('Reset all saved progress on this device? This cannot be undone.')){state={completed:[]};save();render();showToast('Progress reset')}});
+  let deferredPrompt=null;window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;$('installBtn').classList.remove('hide')});$('installBtn').addEventListener('click',async()=>{if(deferredPrompt){deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;$('installBtn').classList.add('hide')}else{showToast('In Safari, tap Share → Add to Home Screen')}});
+  if('serviceWorker' in navigator && location.protocol.startsWith('http'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+  const now=currentISO();selected=days.some(d=>d[0]===now)?now:START;render();
+})();
+</script>
+</body>
+</html>
